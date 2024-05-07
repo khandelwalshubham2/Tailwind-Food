@@ -1,0 +1,69 @@
+body {
+  color: rgb(255 255 255);
+  @apply bg-primaryColor dark:bg-darkColor;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  @apply px-4;
+}
+
+.container-padding {
+  @apply pt-10 pb-4;
+}
+
+.seperator {
+  @apply h-1 bg-secondaryColor w-28 my-5;
+}
+
+.btn {
+  @apply inline-block text-sm py-3 px-8 capitalize text-center cursor-pointer rounded-md ease-linear duration-200 outline-none;
+}
+
+.btn-primary {
+  @apply text-blackColor bg-secondaryColor hover:opacity-75;
+}
+
+.menu-btn {
+  @apply bg-primaryColorLight text-whiteColor hover:opacity-75;
+}
+
+.menu-btn:hover {
+  @apply bg-secondaryColor text-blackColor;
+}
+
+.active-menu-btn {
+  @apply bg-secondaryColor;
+}
+
+.active-header-link {
+  @apply text-secondaryColor;
+}
+
+.item-animation,
+.bounce:hover {
+  animation-name: vertical-moving;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes vertical-moving {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-1rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
